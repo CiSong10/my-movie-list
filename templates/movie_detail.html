@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie List</title>
+</head>
+<body>
+    <p>
+        Return <a href='/'>home</a>.
+    </p>
+    <h1>
+        Movies in {{year}}
+    </h1>
+    <ul>
+      {% for movie in year_movie_list %}
+        <li>
+            <h2>{{movie['Title']}}</h2>
+            <p>imdbID: {{movie['imdbID']}}</p>
+            <p>Type: {{movie['Type']}}</p>
+            <img
+            src={{movie['Poster']}}
+            width=300/>
+        </li>
+      {% endfor %}
+    </ul>
+</body>
+</html>

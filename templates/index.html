@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie List</title>
+</head>
+<body>
+  <form action="/handle_form" method="POST">
+    <h1>
+        Add Movie To List
+    </h1>
+
+    <p>
+        What movie would you like to add to the watching list?
+    </p>
+    <p>
+        <input name="movie" type="text"/><br/>
+    </p>
+
+    <input type="submit" value="Submit Form"/>
+  </form>
+
+  <form action="/movie_detail" method="POST">
+    <h1>
+        See Movie Detail
+    </h1>
+
+    <p>
+        What year of the movie would you like to see the details?
+    </p>
+    <p>
+        <input name="year" type="text"/><br/>
+    </p>
+
+    <input type="submit" value="Submit Form"/>
+  </form>
+
+    <h1> My movie list</h1>
+    <ul>
+      {% for movie_title in all_movie_titles %}
+        <li>{{movie_title}}</li>
+      {% endfor %}
+    </ul>
+
+</body>
+</html>
